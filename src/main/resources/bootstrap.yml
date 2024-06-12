@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    kubernetes:
+        secrets:
+            fail-fast: true
+            enable-api: true
+            sources:
+            - name: secret-message

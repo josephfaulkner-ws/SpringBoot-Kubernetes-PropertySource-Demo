@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: springbootdemo
+  name: springbootdemo
+spec:
+  serviceAccountName: pod-kubernetes-access
+  automountServiceAccountToken: true
+  containers:
+  - image: springbootdemo:latest
+    imagePullPolicy: Never
+    name: springbootdemo
+    ports:
+    - containerPort: 8080
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
