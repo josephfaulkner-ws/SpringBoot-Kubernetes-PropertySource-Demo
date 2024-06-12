@@ -15,7 +15,15 @@ Before building and deploying this app to Kubernetes, you may be curious to run 
 
 Deploying to Kubernetes
 
+First, confirm that kubectl is setup to use docker-desktop
 
+```
+kubectl get nodes
+NAME             STATUS   ROLES           AGE   VERSION
+docker-desktop   Ready    control-plane   19h   v1.28.2
+
+kubectl config view --minify
+```
 
 ```
 ./mvnw clean package 
